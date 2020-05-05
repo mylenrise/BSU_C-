@@ -1,0 +1,16 @@
+create table shoes;
+create table type(id int(11), name varchar(30));
+create table shoe(id int primary key, 
+		  name varchar(30), 
+		  type_id int(11) not null, 
+		  price float, amount int(11), 
+		  foreign key (type_id) references type (id));
+insert into type values(201, 'Sneakers');
+insert into type values(202, 'Boots');
+insert into type values(203, 'Loafers');
+insert into type values(204, 'Heels');
+insert into type values(205, 'Flats');
+insert into type values(206, 'Slippers');
+insert into shoe values(10001, 'SM-123L', 202, 156.47, 24);
+insert into shoe values(10002, 'KIK0-14', 204, 76.27, 21);
+insert into shoe values(10003, 'NET-479JOG', 201, 255.46, 8);
